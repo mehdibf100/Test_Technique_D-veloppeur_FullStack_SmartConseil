@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "sofrecom": {
+    "smartConseil": {
       "projectType": "application",
       "schematics": {},
       "root": "",
@@ -13,7 +13,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/sofrecom",
+            "outputPath": "dist/smartConseil",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": [
@@ -61,10 +61,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "sofrecom:build:production"
+              "browserTarget": "smartConseil:build:production"
             },
             "development": {
-              "browserTarget": "sofrecom:build:development"
+              "browserTarget": "smartConseil:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -72,7 +72,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "sofrecom:build"
+            "browserTarget": "smartConseil:build"
           }
         },
         "test": {

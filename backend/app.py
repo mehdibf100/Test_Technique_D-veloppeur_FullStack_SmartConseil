@@ -39,11 +39,9 @@ class Book(db.Model):
             'cover_image': self.cover_image
         }
 
-# ---------- Initialize the database ----------
 with app.app_context():
     db.create_all()
 
-# ---------- Routes ----------
 @app.route('/books', methods=['GET'])
 def get_books():
     books = Book.query.all()
