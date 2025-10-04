@@ -6,14 +6,12 @@ from werkzeug.utils import secure_filename
 
 app = Flask(__name__)
 
-# ---------- PostgreSQL configuration (Neon) ----------
 app.config['SQLALCHEMY_DATABASE_URI'] = (
     'postgresql://neondb_owner:npg_6Cb1JqYymahD@ep-crimson-moon-ad9o64dg-pooler.c-2.us-east-1.aws.neon.tech/'
     'neondb?sslmode=require&channel_binding=require'
 )
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 
-# ---------- File upload configuration ----------
 app.config['UPLOAD_FOLDER'] = 'uploads'
 app.config['ALLOWED_EXTENSIONS'] = {'png', 'jpg', 'jpeg'}
 os.makedirs(app.config['UPLOAD_FOLDER'], exist_ok=True)
